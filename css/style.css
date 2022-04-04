@@ -1,0 +1,241 @@
+
+
+
+
+
+body{
+    background-color:  violet;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+
+:root {
+
+
+	--cor-green:   #00A74A;
+	--cor-red:     #9F0F17;
+	--cor-yellow:  #CCA707;
+	--cor-blue:    #094A8F;
+	
+
+
+
+	--cor-light-green:    #13ff7c;
+	--cor-light-red:      #ff4c4c;
+	--cor-light-yellow:   #fed93f;
+	--cor-light-blue:     #1c8cff;
+	
+
+
+
+	--cor-border:		  #333333;
+	--cor-center:  		  #ECE7EE;
+
+
+
+	--cor-counter-bg:	  #32050C;
+	--cor-counter-off:	  #430710;
+	--cor-counter-on:	  #DC0D29;
+	
+
+
+	--cor-switch: 	      #3193DE;
+
+
+
+	--jogo-size: 480px;
+	--jogo-border: 1.5rem solid var(--cor-border);
+
+
+
+}
+
+
+
+
+.container{
+    width: var(--jogo-size);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*margin usado no container faz com que o bloco do jogo fique centralizado sem a ajuda de display; estou testando novas ideias;
+*/
+
+footer{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.jogo{
+    width: var(--jogo-size);
+    height: var(--jogo-size);
+    margin-top: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+     
+}
+.titulo_game{
+    font-size: 24px;
+    margin: 0;
+    padding-top: 60px;
+    padding-left: 20px;
+}
+
+
+.box_jogo{
+    width: 240px;
+    height: 240px;
+     
+}
+.topo_esquerdo{
+    background-color: var(--cor-green);
+    border-radius: 100% 0% 0% 0%;
+}
+.topo_direito{
+    background-color: var(--cor-blue);
+    border-radius: 0% 100% 0% 0%;
+}
+.baixo_esquerdo{
+    background-color: var(--cor-yellow);
+    border-radius: 0% 0% 0% 100%;
+}
+.baixo_direito{
+    background-color: var(--cor-red);
+    border-radius: 0% 0% 100% 0%;
+}
+
+
+.topo_esquerdo.box_jogo--ativar{
+    background-color: var(--cor-light-green);
+}
+.topo_direito.box_jogo--ativar{
+    background-color: var(--cor-light-blue);
+}
+.baixo_esquerdo.box_jogo--ativar{
+    background-color: var(--cor-light-yellow);
+
+}
+.baixo_direito.box_jogo--ativar{
+    background-color: var(--cor-light-red);
+}
+
+.jogo_box--podeClicar{
+    cursor: pointer;
+}
+
+
+.opcoes-de-jogo{
+    position: absolute;
+    background-color: whitesmoke;
+    width: 240px;
+    height: 240px;
+    top: 6rem;
+    left: 6rem;
+    border: var(--jogo-border )  ;
+     
+
+    border-radius: 400px;
+
+}
+
+
+.interface-usuario{
+    padding-left: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.agrupar{
+    margin-right: 20px;
+}
+
+.grupo-maior{
+    display: flex;
+    width: 10rem;
+    margin-left:2.5rem;
+}
+.interface-usuario-modo{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 12px; 
+}
+.interface-usuario-modo-swith{
+    padding-top: 16px;
+}
+.interface-usuario-btn{
+    
+    width: 16px;
+    height: 16px;
+    margin-left: .2rem;
+    border-radius: 65px;
+    box-shadow: 0 3px 2px rgb(46, 43, 43);
+    cursor: pointer;
+    border: 3px solid rgb(75, 60, 60);
+
+}
+
+.interface-usuario-btn:active{
+    transform: translate(0, 3px);
+    box-shadow: none;
+}
+.interface-usuario-bora{
+    background-color: orangered;
+}
+.interface-usuario-btn-feito{
+    background-color: #CCA707;
+}
+.interface-usuario-btn-switch{
+    background-color: #333333;
+    margin-left:  10px;
+    margin-right:  10px;
+    width: 70px;
+    height: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.interface-usuario-btn-switch::before{
+    content: '';
+    background-color: var(--cor-light-blue) ;
+    display: block;
+    position: relative;
+    left:35px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(51, 34, 34);
+}
+ .interface-usuario-btn-switch--ligado::before{
+    left: 10px;
+}
+.interface-usuario-contar{
+    background-color: rgb(61, 25, 25);
+    color: #5f0f1b;
+    font-size: 16px;
+    text-align: center;
+    width: 35px;
+    height: 20px;
+    border-radius: 10px;
+}
+.interface-usuario-contar--ligado{
+    color: red;
+}
+.led{
+    background-color: #8b1527;
+    margin-left: 11px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 40px;
+
+}
+.led--ligado{
+    background-color: red;
+}
